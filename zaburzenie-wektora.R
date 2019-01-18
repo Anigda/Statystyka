@@ -1,5 +1,5 @@
 M=100
-s=0.3
+s=0.2
 wektor=rnorm(M)
 while(var(wektor)> 1.1 || var(wektor)< 0.9 || mean(wektor)> 0.1 ||
       mean(wektor)< -0.1 || shapiro.test(wektor)$p.value<0.85)
@@ -83,10 +83,10 @@ while(var(c(wektor,parzystygeometryczny))> v1 ||
 {parzystygeometryczny=c(rgeom(n,0.85),-rgeom(n,0.85)); n=n-1};
 wektor7[i]=2*(n+1)}
 
-cat("rozklad wykladniczy:\t\t\t\t ?rednia =",ceiling(mean(wektor1))," min =",min(wektor1)," max =",max(wektor1),
-    "\nrozklad parzysty wykladniczy:\t\t\t ?rednia =", ceiling(mean(wektor2))," min =", min(wektor2)," max =",max(wektor2),
-    "\nrozklad jednostajny:\t\t\t\t ?rednia =", ceiling(mean(wektor3))," min =", min(wektor3)," max =",max(wektor3),
-    "\nrozklad gamma:\t\t\t\t\t ?rednia =", ceiling(mean(wektor4))," min =", min(wektor4)," max =",max(wektor4),
-    "\nrozklad parzysty gamma:\t\t\t\t ?rednia =", ceiling(mean(wektor5))," min =", min(wektor5)," max =",max(wektor5),
-    "\nrozklad geometryczny:\t\t\t\t ?rednia =", ceiling(mean(wektor6))," min =", min(wektor6)," max =",max(wektor6),
-    "\nrozklad parzysty geometryczny:\t\t\t ?rednia =", ceiling(mean(wektor7))," min =", min(wektor7)," max =",max(wektor7))
+cat("rozklad wykladniczy:\t\t\t min =", min(wektor1),
+    "\nrozklad parzysty wykladniczy:\t\t min =", min(wektor2),
+    "\nrozklad jednostajny:\t\t\t min =", min(wektor3),
+    "\nrozklad gamma:\t\t\t\t min =", min(wektor4),
+    "\nrozklad parzysty gamma:\t\t\t min =", min(wektor5),
+    "\nrozklad geometryczny:\t\t\t min =", min(wektor6),
+    "\nrozklad parzysty geometryczny:\t\t min =", min(wektor7))
